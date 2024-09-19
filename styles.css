@@ -184,6 +184,8 @@ body>*{
 -moz-box-shadow: -2px 29px 23px -14px rgba(10,10,10,0.75);
     display: flex;
     flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
   
 }
 
@@ -193,7 +195,6 @@ body>*{
 
 .features-section .feature-heading{
   padding: 20px;
-  margin-inline: auto;
   
 }
 .features-section .feature-heading h2{
@@ -214,7 +215,7 @@ body>*{
 
 .features-section .card{
     max-width: 500px;
-    margin: 20px auto;
+    /* margin: 10px 10px; */
     padding: 30px 20px;
     border: 3px solid var(--clr-dark-200);
     border-radius: 32px;
@@ -227,6 +228,7 @@ body>*{
     background-image: linear-gradient(white, rgba(255, 255, 255, 70%)), linear-gradient(128deg, rgb(255, 219, 16) 0%, rgb(17, 251, 255) 37%, rgb(255, 19, 180) 67%, rgb(44, 13, 252) 100%); 
     background-origin: border-box;
     background-clip: padding-box, border-box;
+    
     
 }
 
@@ -250,8 +252,6 @@ body>*{
 }
 
 
-.about-section{
-}
 .about-section .image-container{
   overflow: hidden;
   margin-inline: auto;
@@ -274,7 +274,7 @@ body>*{
 }
 
 .about-section .about-container article.container:last-child{
-  font-size: var(--fs-smqll);
+  font-size: var(--fs-normal);
   font-weight: var(--fw-light);
 }
 
@@ -286,9 +286,11 @@ body>*{
 }
 .about-section .presentation-container .video-container{
   width: 100%;
+  
 }
 .about-section .video-container video{
   width: 100%;
+  background-color: var(--clr-dark-500);
 }
 .about-section .video-container p{
   text-align: center;
@@ -296,6 +298,64 @@ body>*{
 .about-section article >*{
   margin-bottom: 20px;
   color: var(--clr-dark-500);
+}
+
+
+.pricing-section{
+  width: 100%;
+  background-color: var(--clr--feature-section);
+  
+}
+.pricing-section > p{
+  text-align: center;
+  font-size: var(--fs-xl);
+  font-weight: var(--fw-regular);
+  padding: 20px;
+}
+.pricing-section .price-container{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.pricing-section .pricing-card{
+  max-width: 400px;
+  padding: 0 50px;
+  padding-top: 70px;
+  padding-bottom: 230px;
+  border-radius: 1rem;
+  box-shadow: 0 4px 4px var(--clr-dark-400);
+  border:2px solid transparent;
+  transition: 0.5s all ease-in-out;
+}
+
+.pricing-section .pricing-card:hover{
+  position: relative;
+  border: 2px solid transparent;
+  background-image: linear-gradient(rgba(243, 243, 243,100%), rgba(243, 243, 243, 100%)), linear-gradient(128deg, rgb(255, 219, 16) 0%, rgb(17, 251, 255) 37%, rgb(255, 19, 180) 67%, rgb(44, 13, 252) 100%); 
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
+.pricing-card .digit{
+  font-size: var(--fs-heading);
+  font-weight: var(--fw-black);
+  font-family: var(--ff-main);
+}
+.pricing-card > p{
+  font-weight: var(--fw-medium);
+  font-size: var(--fs-regular);
+}
+.pricing-card>.month{
+  margin: 10px;
+}
+.pricing-section .features-list{
+  font-size: var(--fs-regular);
+  font-weight: var(--fw-light);
+  margin: 20px 0;
+}
+.features-list > *{
+  margin: 8px 0;
 }
 
 
