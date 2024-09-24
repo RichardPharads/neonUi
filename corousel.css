@@ -1,0 +1,106 @@
+.scroller {
+    max-width: 600px;
+    min-width: 600px;
+  }
+  
+  .scroller__inner {
+    padding-block: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+  }
+
+  .scroller img{
+    max-width: 500px;
+    min-width: 500px;
+    height: 100%;
+    border: 2px solid transparent;
+
+  }
+
+
+
+  .scroller[data-animated="true"] {
+    overflow: hidden;
+    -webkit-mask: linear-gradient(
+      90deg,
+      transparent,
+      white 20%,
+      white 80%,
+      transparent
+    );
+    mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+  }
+  
+  .scroller[data-animated="true"] .scroller__inner {
+    width: max-content;
+    flex-wrap: nowrap;
+    animation: scroll var(--_animation-duration, 30s)
+      var(--_animation-direction, forwards) linear infinite;
+  }
+  
+  .scroller[data-direction="right"] {
+    --_animation-direction: reverse;
+  }
+  
+  .scroller[data-direction="left"] {
+    --_animation-direction: forwards;
+  }
+  
+  .scroller[data-speed="fast"] {
+    --_animation-duration: 30s;
+  }
+  
+  .scroller[data-speed="slow"] {
+    --_animation-duration: 60s;
+  }
+  
+  @keyframes scroll {
+    to {
+      transform: translate(calc(-50% - 0.5rem));
+    }
+  }
+  
+  /* general styles */
+  
+  :root {
+    --clr-neutral-100: hsl(0, 0%, 100%);
+    --clr-primary-400: hsl(0, 0%, 91%);
+    --clr-primary-800: hsl(0, 0%, 96%);
+    --clr-primary-900: hsl(218, 33%, 9%);
+  }
+  
+  html {
+    color-scheme: dark;
+  }
+  
+  body {
+    display: grid;
+    min-block-size: 100vh;
+    place-content: center;
+    font-family: system-ui;
+    font-size: 1.125rem;
+    background-color: var(--clr-primary-800);
+    color: var(--clr-primary-900);
+  }
+  
+  .tag-list {
+    margin: 0;
+    padding-inline: 0;
+    list-style: none;
+  }
+  .tag-list li {
+    padding: 1rem;
+    background: var(--clr-primary-400);
+
+    min-width: 400px;
+    max-width: 400px;
+  }
+  .tag-list li:hover{
+    background-image: linear-gradient(rgba(243, 243, 243,100%), rgba(243, 243, 243, 100%)), linear-gradient(128deg, rgb(255, 219, 16) 0%, rgb(17, 251, 255) 37%, rgb(255, 19, 180) 67%, rgb(44, 13, 252) 100%); 
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+  }
+  
+  /* for testing purposed to ensure the animation lined up correctly */
