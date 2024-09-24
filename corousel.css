@@ -1,9 +1,16 @@
-.scroller {
+.developers{
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.developers .scroller {
     max-width: 600px;
     min-width: 600px;
+    margin-inline: auto;
+    
   }
   
-  .scroller__inner {
+.developers .scroller__inner {
     padding-block: 1rem;
     display: flex;
     flex-wrap: wrap;
@@ -11,7 +18,7 @@
 
   }
 
-  .scroller img{
+.developers .scroller img{
     max-width: 500px;
     min-width: 500px;
     height: 100%;
@@ -21,7 +28,7 @@
 
 
 
-  .scroller[data-animated="true"] {
+.developers .scroller[data-animated="true"] {
     overflow: hidden;
     -webkit-mask: linear-gradient(
       90deg,
@@ -64,26 +71,6 @@
   
   /* general styles */
   
-  :root {
-    --clr-neutral-100: hsl(0, 0%, 100%);
-    --clr-primary-400: hsl(0, 0%, 91%);
-    --clr-primary-800: hsl(0, 0%, 96%);
-    --clr-primary-900: hsl(218, 33%, 9%);
-  }
-  
-  html {
-    color-scheme: dark;
-  }
-  
-  body {
-    display: grid;
-    min-block-size: 100vh;
-    place-content: center;
-    font-family: system-ui;
-    font-size: 1.125rem;
-    background-color: var(--clr-primary-800);
-    color: var(--clr-primary-900);
-  }
   
   .tag-list {
     margin: 0;
@@ -103,4 +90,3 @@
     background-clip: padding-box, border-box;
   }
   
-  /* for testing purposed to ensure the animation lined up correctly */
