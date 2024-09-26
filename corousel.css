@@ -1,6 +1,22 @@
 .developers{
   width: 100%;
   overflow-x: hidden;
+  border:2px solid red;
+}
+
+.developers .developers-corousel{
+  margin: 0 auto;
+}
+
+.developers .container{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.developers .container article{
+  width: 500px;
+  border: 2px solid red;
 }
 
 .developers .scroller {
@@ -79,14 +95,7 @@
   }
   .tag-list li {
     padding: 1rem;
-    background: var(--clr-primary-400);
-
     min-width: 400px;
     max-width: 400px;
+    background-color: rgb(224, 224, 224);
   }
-  .tag-list li:hover{
-    background-image: linear-gradient(rgba(243, 243, 243,100%), rgba(243, 243, 243, 100%)), linear-gradient(128deg, rgb(255, 219, 16) 0%, rgb(17, 251, 255) 37%, rgb(255, 19, 180) 67%, rgb(44, 13, 252) 100%); 
-    background-origin: border-box;
-    background-clip: padding-box, border-box;
-  }
-  
