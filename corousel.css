@@ -79,8 +79,7 @@
   }
   .tag-list li {
     padding: 1rem;
-    background: var(--clr-primary-400);
-
+    background:#f0f0f0;
     min-width: 400px;
     max-width: 400px;
   }
