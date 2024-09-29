@@ -175,13 +175,13 @@ body{
 
 
 
-
 .features-section{
     background-color: var(--clr--feature-section);
-    padding: 50px 20px;
+    padding: 20px;
     border-radius: 20px;
     margin-inline: auto;
     gap: 20px;
+    margin: 100px auto 50px auto;
     justify-content: space-between;
   
 }
@@ -194,18 +194,22 @@ body{
   gap: 10px;
 }
 
-.features-section .feature-heading>*{
-    margin: 10px 0;
+
+
+.feature-heading{
+  padding: 20px 10px;
 }
 
-.features-section .feature-heading{
-  padding: 20px 0;
-  
-}
 .features-section .feature-heading h2{
     font-size: var(--fs-xl);
     font-weight: var(--fw-regular);
     color: var(--clr-dark-500);
+}
+.features-section .feature-heading h3{
+  font-weight: var(--fw-regular);
+  color: var(--clr-dark-400);
+  font-size: var(--fs-regular);
+  color: var(--clr-dark-400);
 }
 
 .features-section .feature-heading  p{
@@ -263,9 +267,18 @@ body{
 }
 
 
+
+.about-section > *{
+  padding: 100px 0;
+}
 .about-section .image-container{
   overflow: hidden;
   margin-inline: auto;
+
+}
+.about-section .image-container img{
+  max-width: 40%;
+  min-width: 100%;
 }
 .about-section article.container{
   padding: 50px 0;
@@ -273,20 +286,20 @@ body{
 .about-section article.container > *{
   margin: 10px 0;
 }
-.about-section .about-container article.container>h1{
-  font-size: var(--fs-xl);
-  font-weight: var(--fw-medium);
-  color: var(--clr-dark-500);
-}
-.about-section .about-container article.container>h2{
-  font-weight: var(--fw-regular);
-  font-size: var(--fs-regular);
-  color: var(--clr-dark-500);
-}
 
+.about-section .about-container article.container>h2{
+  font-size: var(--fs-xl);
+  font-weight: var(--fw-regular);
+  color: var(--clr-dark-500);
+}
+.about-section article.container >h3{
+  font-size: var(--fs-large);
+  font-weight: var(--fw-light);
+}
 .about-section .about-container article.container:last-child{
   font-size: var(--fs-normal);
   font-weight: var(--fw-light);
+
 }
 
 .about-section .presentation-container{
@@ -295,14 +308,28 @@ body{
 .about-section .presentation >*{
   margin-bottom: 20px;
 }
+
+.about-section .presentation h3{
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-large);
+}
+
+.about-section article p{
+  line-height: calc(var(--fs-normal) + 0.5rem);
+
+}
 .about-section .presentation-container .video-container{
   width: 100%;
-  
+
 }
+
 .about-section .video-container video{
+  
   width: 100%;
   background-color: var(--clr-dark-500);
+
 }
+
 .about-section .video-container p{
   text-align: center;
 }
@@ -315,30 +342,33 @@ body{
 .pricing-section{
   width: 100%;
   background-color: var(--clr--feature-section);
+  padding: 50px 0 100px 0;
   
 }
-.pricing-section > h2{
+.pricing-section h2{
   text-align: center;
   font-size: var(--fs-xl);
-  font-weight: var(--fw-regular);
-  padding: 20px;
+  font-weight: var(--fs-regular);
+  color: var(--clr-dark-400);
+  font-family: var(--ff-inter);
+
 }
 .pricing-section .price-container{
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
+  padding: 50px 0;
 }
 
 .pricing-section .pricing-card{
   max-width: 400px;
   min-width: 300px;
-  padding: 0 50px;
-  padding-top: 70px;
+  padding: 0 30px;
+  padding-top: 45px;
   padding-bottom: 120px;
   border-radius: 1rem;
-  box-shadow: 0 4px 4px var(--clr-dark-400);
-  border:2px solid transparent;
+  border:2px solid var(--clr-dark-200);
   transition: 0.5s all ease-in-out;
 }
 
@@ -377,7 +407,119 @@ body{
   
   /* general styles */
   
- 
+  .developers{
+    width: 100%;
+    overflow-x: hidden;
+    padding: 50px 0;
+  
+  }
+  
+  .developers h2{
+    font-size: var(--fs-xl);
+    font-weight: var(--fs-regular);
+    color: var(--clr-dark-400);
+  }
+
+  .developers .developers-corousel{
+    margin: 0 auto;
+  }
+  
+  .developers .container{
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 100px 0;
+  
+  }
+  
+  .developers .container article{
+    min-width: 300px;
+    max-width: 700px;
+    padding-bottom: 20px;
+  }
+  .developers .container article h3{
+    font-weight: var(--fw-medium);
+    font-size: var(--fs-large);
+    color: var(--clr-dark-400);
+    padding-bottom: 40px;
+  }
+
+  .developers article p{
+    color: var(--clr-dark-400);
+    font-size: var(--fs-normal);
+    font-weight: var(--fw-light);
+    line-height: calc(var(--fs-normal) + 0.5rem);
+  }
+  .developers .scroller {
+      max-width: 600px;
+      min-width: 600px;
+      margin-inline: auto;
+      
+    }
+    
+  .developers .scroller__inner {
+      padding-block: 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+  
+    }
+  
+  .developers .scroller img{
+      max-width: 500px;
+      min-width: 500px;
+      height: 100%;
+      border: 2px solid transparent;
+  
+    }
+  
+  
+  
+  .developers .scroller[data-animated="true"] {
+      overflow: hidden;
+      -webkit-mask: linear-gradient(
+        90deg,
+        transparent,
+        white 20%,
+        white 80%,
+        transparent
+      );
+      mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+    }
+    
+    .scroller[data-animated="true"] .scroller__inner {
+      width: max-content;
+      flex-wrap: nowrap;
+      animation: scroll var(--_animation-duration, 30s)
+        var(--_animation-direction, forwards) linear infinite;
+    }
+    
+    .scroller[data-direction="right"] {
+      --_animation-direction: reverse;
+    }
+    
+    .scroller[data-direction="left"] {
+      --_animation-direction: forwards;
+    }
+    
+    .scroller[data-speed="fast"] {
+      --_animation-duration: 30s;
+    }
+    
+    .scroller[data-speed="slow"] {
+      --_animation-duration: 60s;
+    }
+    
+    @keyframes scroll {
+      to {
+        transform: translate(calc(-50% - 0.5rem));
+      }
+    }
+    
+    /* general styles */
+  
   .tag-list {
     margin: 0;
     padding-inline: 0;
@@ -402,8 +544,14 @@ body{
 
 
 @media(max-width:600px){
+  .features-section{
+    padding: 40px 20px;
+  }
   .features-section .features-cards{
     grid-template-columns: 1fr;
+  }
+  .about-section .image-container {
+    width: 300px;
   }
 }
 @media(min-width:600px){
@@ -411,7 +559,9 @@ body{
   .features-section .feature-heading {
     max-width: 500px;
   }
-
+  .about-section .image-container {
+    width: 500px;
+  }
 }
 @media(min-width:768px){
 .features-section .feature-heading {
