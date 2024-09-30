@@ -23,18 +23,18 @@
             <ul class="desktop-link-list">
                 <li class="link-item"><a href="#">Home</a></li>
                 <li class="link-item"><a href="#about">About</a></li>
-                <li class="link-item"><a href="#">Pricing</a></li>
-                <li class="link-item"><a href="#">Developers</a></li>
-                <li class="link-item"><a href="#">Contact Us</a></li>
+                <li class="link-item"><a href="#pricing">Pricing</a></li>
+                <li class="link-item"><a href="#developers">Developers</a></li>
+                <li class="link-item"><a href="#contact">Contact Us</a></li>
             </ul>
             <span class="sidebar">
                 <ion-icon id="close" name="close-outline" onclick="toggleSideBar()"></ion-icon>
                 <ul class="link-list">
                     <li class="link-item"><a href="#">Home</a></li>
                     <li class="link-item"><a href="#about">About</a></li>
-                    <li class="link-item"><a href="#">Pricing</a></li>
-                    <li class="link-item"><a href="#">Developers</a></li>
-                    <li class="link-item"><a href="#">Contact Us</a></li>
+                    <li class="link-item"><a href="#pricing">Pricing</a></li>
+                    <li class="link-item"><a href="#developers">Developers</a></li>
+                    <li class="link-item"><a href="#contact">Contact Us</a></li>
                 </ul>
             </span>
     </div>
@@ -117,7 +117,7 @@
         </div>
     </div>
     
-    <div class="pricing-section">
+    <div class="pricing-section" id="pricing">
       <h2>Pricing</h2>
       <div class="price-container container">
         <div class="pricing-card">
@@ -159,7 +159,7 @@
       </div>
     </div>
 
-<div class="developers">
+<div class="developers" id="developers">
     <h2 class="container">Our Developers</h2>
     <div class="container">
         
@@ -211,9 +211,51 @@
 
     </div>
 </div>
-<div class="contact-section">
 
+
+
+
+<div class="contact-section" id="contact">
+    <div class="container">
+        <div class="contact-heading">
+            <h2>Contact with Us</h2>
+            <h3>Always get-in-touch with Neon!</h3>
+        </div>
+
+
+        <form action="post">
+            <div class="user-info-container">
+                <div class="name">
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="email">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+            </div>
+            <div class="message-container">
+                <textarea class="textarea" name="" id="message" placeholder="Message Here!"></textarea>
+                <input type="submit" name="submit" id="submit" value="submit">
+            </div>
+        </form>
+    </div>
 </div>
+
+
+<footer>
+    <ul class="footer-link-list">
+        <li class="link-item"><a href="#">Home</a></li>
+        <li class="link-item"><a href="#about">About</a></li>
+        <li class="link-item"><a href="#pricing">Pricing</a></li>
+        <li class="link-item"><a href="#developers">Developers</a></li>
+        <li class="link-item"><a href="#contact">Contact Us</a></li>
+    </ul>
+    <div class="reserve-container">
+        <p>© 2024 Your Company Name. All Rights Reserved.</p>
+        <p><a href="/terms">Terms of Use</a> | <a href="/privacy">Privacy Policy</a></p>
+    </div>
+</footer>
     <script src="index.js"></script>
     <script src="corousel.js"></script>
 </body>
